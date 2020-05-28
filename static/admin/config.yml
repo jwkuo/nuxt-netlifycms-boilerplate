@@ -1,6 +1,5 @@
 backend:
-  name: github
-  repo: jwkuo/nuxt-netlifycms-boilerplate
+  name: git-gateway
 publish_mode: editorial_workflow
 media_folder: "static/images/uploads" # Media files will be stored in the repo under images/uploads
 public_folder: "/images/uploads"
