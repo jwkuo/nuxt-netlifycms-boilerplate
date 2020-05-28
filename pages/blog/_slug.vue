@@ -1,5 +1,8 @@
 <template lang="html">
   <div class="post">
+    <div class="featured-image">
+      <img v-if="thumbnail" :src="thumbnail" alt="Thumbnail">
+    </div>
     <h1 class="title">{{title}}</h1>
     <p class="date">Posted by {{author}} on {{date}}</p>
     <div class="body" v-html="$md.render(body)"/>
@@ -24,6 +27,7 @@ export default {
       body: post.body,
       title: post.title,
       author: post.author,
+      thumbnail: (typeof post.thumbnail !== 'undefined') ? post.thumbnail : null
     };
   }
 }
@@ -45,5 +49,12 @@ export default {
 .post {
   background-color: whitesmoke;
   padding: 20px;
+}
+.featured-image {
+  margin: 10px auto;
+  text-align: center;
+}
+.featured-image img {
+  max-width: 300px;
 }
 </style>
