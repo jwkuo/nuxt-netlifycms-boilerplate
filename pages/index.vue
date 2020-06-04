@@ -8,6 +8,10 @@
       <h2 class="posts-list-title">Posts</h2>
       <p class="post-link" v-for="post in blogPosts"><n-link :to="post._path">{{post.title}}</n-link></p>
     </div>
+    <div class="posts-list">
+      <h2 class="posts-list-title">Experiments</h2>
+      <p class="post-link"><n-link to="/form">Netlify Enabled Form</n-link></p>
+    </div>
   </div>
 </template>
 
